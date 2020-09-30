@@ -54,6 +54,7 @@ export function freezeElement(el, freeze) {
 }
 
 function animateElement(el, start) {
+  // var elem =document.getElementById("myH1")
   console.log('>>>>>>>>>>>>>>>>>>>>>>>animEl', el)
   freezeElement(el, start)
 
@@ -197,12 +198,12 @@ class TopCard extends Component {
     }
   }
 
-  release(el) {
-    console.log('>>>>>>>>>>>>>>this el', el)
+  release() {
+    console.log('>>>>>>>>>>>>>>this el', this.node)
 
     // animateElement(el, false)
-    animateElement(el, false)
-    var S = el.style
+    animateElement(this.node, false)
+    var S = this.node.style
     S.cursor = 'auto'
     var dragout = this.getCurrentDragout().bitmask
     if (dragout == 0) {
