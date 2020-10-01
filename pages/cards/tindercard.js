@@ -5,17 +5,19 @@ import Card from '../../components/card'
 import data from '../api/data'
 
 const to = (i) => ({
-  x: i * -5,
+  // x: i * -5,
+  x: 0,
   y: 0,
   scale: 1,
   rot: 0,
-  //   rot: -10 + Math.random() * 20,
+  // rot: -10 + Math.random() * 20,
+
   delay: i * 100,
 })
 const from = (i) => ({ rot: 0, scale: 1.5, y: -1000 })
 
 const trans = (r, s) =>
-  `perspective(1500px) rotateX(30deg) rotateY(${
+  `perspective(1500px) rotateX(0deg) rotateY(${
     r / 10
   }deg) rotateZ(${r}deg) scale(${s})`
 

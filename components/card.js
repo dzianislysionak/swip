@@ -2,12 +2,15 @@ import React from 'react'
 import { animated, interpolate } from 'react-spring/hooks.cjs'
 import Carousel from 'nuka-carousel'
 import { string, number, array } from 'prop-types'
+import styles from '../styles/Home.module.css'
 
 const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
   const { name, age, distance, text, pics } = data[i]
 
   return (
+    // <div>
     <animated.div
+      className={styles.toplevel}
       key={i}
       style={{
         transform: interpolate(
@@ -16,16 +19,17 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
         ),
       }}>
       <animated.div
+        className={styles.twolevel}
         {...bind(i)}
         style={{
           transform: interpolate([rot, scale], trans),
         }}>
-        <div className="card">
-          <Carousel>
+        <div className={styles.threelevel}>
+          {/* <Carousel>
             {pics.map((pic, index) => (
               <img src={pic} key={index} alt="profilePicture" />
             ))}
-          </Carousel>
+          </Carousel> */}
           <h2>{name},</h2>
           <h2>{age}</h2>
           <h5>{distance}</h5>
@@ -33,6 +37,7 @@ const Card = ({ i, x, y, rot, scale, trans, bind, data }) => {
         </div>
       </animated.div>
     </animated.div>
+    // </div>
   )
 }
 

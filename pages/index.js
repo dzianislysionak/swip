@@ -12,7 +12,8 @@ import Deck from '../pages/cards/tindercard'
 
 export default function Index() {
   return (
-    <Deck />
+    <h1>asd</h1>
+    // <Deck />
     // <Container maxWidth="sm">
     //   <Box my={4}>
     //     <TwoUp />

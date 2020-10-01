@@ -15,9 +15,9 @@ a {
   box-sizing: border-box;
 } */
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 html,
 body {
@@ -45,7 +45,7 @@ body {
 #__next > div > div {
   padding: 5px;
   background-color: white;
-  background-size: auto 85%;
+  /* background-size: auto 85%; */
   background-repeat: no-repeat;
   background-position: center center;
   width: 300px;
@@ -53,12 +53,11 @@ body {
   height: 550px;
   max-height: 570px;
   will-change: transform;
+  border: 1px solid black;
   border-radius: 10px;
-  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4),
-    0 10px 10px -10px rgba(50, 50, 73, 0.3);
 }
 
-img {
+/* img {
   height: 380px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -69,7 +68,7 @@ button[aria-label='next'] {
   background: salmon !important;
   color: black !important;
 }
-*/ h2 {
+ h2 {
   display: inline-block;
   margin-right: 10px;
 }
@@ -102,4 +101,4 @@ h5:last-of-type {
 
 .slider-control-bottomcenter > ul > li > button {
   color: salmon !important;
-}
+} */
